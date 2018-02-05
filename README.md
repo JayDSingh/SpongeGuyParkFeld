@@ -22,7 +22,25 @@ Two groups will scrape transcripts from two shows from the internet, clean the d
 
 Once part one is completed, two groups (not necessarily the same members as previous two groups) will analyze the scraped data for sentiment and vocabulary complexity shifts.  Other focuses may arise as the project continues, but for now, those are the main goals.  
 
-After analysis is completed, we hope to write a publication-quality article about our findings.  
+After analysis is completed, we hope to write a publication-quality article about our findings.
+
+# Steps to completing the project
+
+1. Pick a standard format in which to store script data.
+2. Write a program that goes to a web page and stores the script data in that standard format.
+3. Look at the results of converting the data into that format.
+4. Clean the data where necessary.
+5. Write functions that take measurements/count specific phenomena in the data.
+6. Produce data visualizations/report stats.
+7. Perform an analysis on the numbers.
+8. Write an article explaining analysis/summarizing the results.
+
+# Important Python packages
+
+Beautiful soup
+Pandas
+Nltk?
+
 
 # Conclusion
 
