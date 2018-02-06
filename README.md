@@ -41,6 +41,11 @@ After analysis is completed, we hope to write a publication-quality article abou
 [Pandas](https://pandas.pydata.org/)  
 [Nltk](http://www.nltk.org/)? 
 
+# Online Scripts
+
+[Spongebob](http://spongebob.wikia.com/wiki/List_of_transcripts#Season)
+[South Park](https://www.kaggle.com/tovarischsukhov/southparklines)
+[Seinfeld]
 
 # Conclusion
 
