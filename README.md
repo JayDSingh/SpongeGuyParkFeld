@@ -45,7 +45,7 @@ After analysis is completed, we hope to write a publication-quality article abou
 
 [Spongebob](http://spongebob.wikia.com/wiki/List_of_transcripts#Season)  
 [South Park](https://www.kaggle.com/tovarischsukhov/southparklines)  
-[Seinfeld]
+[Seinfeld](http://www.seinfeldscripts.com/)  
 
 # Conclusion
 
