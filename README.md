@@ -43,8 +43,8 @@ After analysis is completed, we hope to write a publication-quality article abou
 
 # Online Scripts
 
-[Spongebob](http://spongebob.wikia.com/wiki/List_of_transcripts#Season)
-[South Park](https://www.kaggle.com/tovarischsukhov/southparklines)
+[Spongebob](http://spongebob.wikia.com/wiki/List_of_transcripts#Season)  
+[South Park](https://www.kaggle.com/tovarischsukhov/southparklines)  
 [Seinfeld]
 
 # Conclusion
