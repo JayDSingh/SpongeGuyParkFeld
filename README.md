@@ -37,9 +37,9 @@ After analysis is completed, we hope to write a publication-quality article abou
 
 # Important Python packages
 
-Beautiful soup
-Pandas
-Nltk?
+[Beautiful soup](https://www.crummy.com/software/BeautifulSoup/)  
+[Pandas](https://pandas.pydata.org/)  
+[Nltk](http://www.nltk.org/)? 
 
 
 # Conclusion
