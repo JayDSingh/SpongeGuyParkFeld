@@ -12,13 +12,15 @@ Jason, Jay, Liam,  Evan, Jerry, Mikaela, Michelle, Euclid, Stevyn, and Lauren.
 
 # Timeline
 
-This project has two main parts. We will be focusing on one part at a time.
+We split this project into two main parts, with each group working independently.
 
 ## Part one
+Weeks (2-5)
 
 Two groups will scrape transcripts from the shows from the internet, clean the data, and make sure the data are in a useable format.  
 
-## Part two 
+## Part two
+Weeks (6-10)
 
 Once part one is completed, two groups (not necessarily the same members as previous two groups) will analyze the scraped data for sentiment and vocabulary complexity shifts.  Other focuses may arise as the project continues, but for now, those are the main goals.  
 
