@@ -1,33 +1,31 @@
-# random stuff with beautiful soup
-
+# attempt at grabbing all the urls for seinfeld scripts
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 # url to look at
-firstEpi = "http://www.seinfeldscripts.com/TheSeinfeldChronicles.htm"
+transcripts = "http://www.seinfeldscripts.com/seinfeld-scripts.html"
 # opens url and reads html contents
-firstHTML = urlopen(firstEpi).read()
+rawHTML = urlopen(transcripts).read()
 
 # makes beautiful soup object and parses html from opened url
-stew = BeautifulSoup(firstHTML, "html.parser")
+soup = BeautifulSoup(rawHTML, "html.parser")
 
-# extracts scripts from html
-for script in stew(["script", "style"]):
-    script.extract()
+links = []
 
-# english without html
-# words = stew.get_text()
-    # different from stew.get_text
-# print(words)
+# looks through each 'a' tag in the second table in the webpage
+for link in soup.find_all("table")[1].find_all("a"):
+    # strips string of whitespace (some have intitial spaces)
+    # and concatenates it with homepage url to form the full url
+    # adds it to the list of links
+    links += ["http://www.seinfeldscripts.com/" + link.get("href").strip()]
 
-# prints the contents of the first div element in html
-print(stew.find("div", {"id": "content"}))
+print(links)
 
 #######################################################################
 #
-# # other stuff, basically same thing as above?
-#
-# # first episode script url
+# # other random stuff
+# 
+# # script url
 # url = "http://www.seinfeldscripts.com/seinfeld-scripts.html"
 # # reads html
 # html = urlopen(url).read()
