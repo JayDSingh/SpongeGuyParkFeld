@@ -11,10 +11,9 @@ It has the layout:
 for each line.
 
 ### Humor classification
-Read "All-seasons.csv" the South Park data from Kaggle into Python & clean it.  
-Add a response variable indicating that a line is part of a joke.  
-  Could use indicator for humor or not humor, or  
-  Look for jokes of the form:  
+Lets put the mountain of contextual data to work and do some data mining on humor.
+We manually add a response variable indicating that a line is part of a joke.  
+  Could use indicator = humor or not humor, or look for jokes of the form:  
     1. Setup - A future event suddenly has meaning  
     2. Reinforcement - The "build-up" of the joke  
     3. Payoff, i.e. punchline  
@@ -24,8 +23,10 @@ Add a response variable indicating that a line is part of a joke.
     Requires manual input  
 
 ## 2nd Checkpoint (2/26):
-Have all the seasons (clean?).
 Think of measurements to take and write code to obtain statistics and establish an analysis based on these measurements.
+Goals:  
+  *Have all the seasons (clean?).  
+
 
 ## 3rd Checkpoint:
 Run the code on the data and obtain measurements, then look at the results.
