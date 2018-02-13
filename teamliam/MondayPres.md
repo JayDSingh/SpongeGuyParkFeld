@@ -11,17 +11,17 @@ It has the layout:
 for each line.
 
 ### Humor classification
-Read "All-seasons.csv" the South Park data from Kaggle into Python & clean it.
-Add a response variable indicating that a line is part of a joke. \\
-  Could use indicator for humor or not humor, or \\
-  Look for jokes of the form: \\
-    1. Setup - A future event suddenly has meaning \\
-    2. Reinforcement - The "build-up" of the joke \\
-    3. Payoff, i.e. punchline \\
-  +: Gives another response to work with \\
-    Possibly interesting results with a joke generator \\
-  -: May be clunky if a joke is 1 or 2 lines, or situational \\
-    Requires manual input \\
+Read "All-seasons.csv" the South Park data from Kaggle into Python & clean it.  
+Add a response variable indicating that a line is part of a joke.  
+  Could use indicator for humor or not humor, or  
+  Look for jokes of the form:  
+    1. Setup - A future event suddenly has meaning  
+    2. Reinforcement - The "build-up" of the joke  
+    3. Payoff, i.e. punchline  
+  +: Gives another response to work with  
+    Possibly interesting results with a joke generator  
+  -: May be clunky if a joke is 1 or 2 lines, or situational  
+    Requires manual input  
 
 ## 2nd Checkpoint (2/26):
 Have all the seasons (clean?).
