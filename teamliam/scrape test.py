@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
 for script in soup(["script", "style"]):
     script.extract()
-print soup.prettify
 raw = soup.get_text()
 #raw is just the text
+raw = raw[:-1696]
+#stripping off all the unnecessary things at the end
