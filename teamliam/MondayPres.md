@@ -1,4 +1,4 @@
-# Our plan for monday
+# General Workflow
 
 ## 1st Checkpoint (2/12):
 ### Web scraping
