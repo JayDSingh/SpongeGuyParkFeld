@@ -2,13 +2,13 @@
 
 ## 1st Checkpoint (2/12):
 ### Web scraping
-Scrape the Spongebob and Seinfeld data, and be able to store as csv in a desired standard format, so that we can write functions that work for all three data sets of SpongeBob, Seinfeld, and South Park.
-Since the South Park data is cleaned, we should use that csv file as a guide. \\
-It has the layout: \\
-\\
-10,1,Stan,"You guys, you guys! Chef is going away. \\
-" \\
-for each line. \\
+Scrape the Spongebob and Seinfeld data, and be able to store as csv in a desired standard format, so that we can write functions that work for all three data sets of SpongeBob, Seinfeld, and South Park.  
+Since the South Park data is cleaned, we should use that csv file as a guide.  
+It has the layout:  
+  
+10,1,Stan,"You guys, you guys! Chef is going away.  
+"  
+for each line.
 
 ### Humor classification
 Read "All-seasons.csv" the South Park data from Kaggle into Python & clean it.
