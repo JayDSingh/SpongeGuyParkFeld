@@ -26,7 +26,7 @@ We manually add a response variable indicating that a line is part of a joke.
 Think of measurements to take and write code to obtain statistics and establish an analysis based on these measurements.
 Goals:  
   *Have all the seasons (clean?).  
-
+⋅⋅*Have all the seasons
 
 ## 3rd Checkpoint:
 Run the code on the data and obtain measurements, then look at the results.
