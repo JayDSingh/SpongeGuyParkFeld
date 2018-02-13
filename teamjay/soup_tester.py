@@ -21,7 +21,14 @@ for script in stew(["script", "style"]):
 # print(words)
 
 # prints the contents of the first div element in html
-print(stew.find("div", {"id": "content"}))
+
+contentdiv = stew.find("div", {"id": "content"})
+
+paragraphs = contentdiv.find_all("p")
+
+print(paragraphs)
+
+
 
 #######################################################################
 #
