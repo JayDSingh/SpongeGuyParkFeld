@@ -51,6 +51,8 @@ for url in links[0:1]:
 #####################################################################
 # notes about scripts/inconsistencies
 # not all paragraphs are a new speaker, sometimes just a new line
+# some scripts have words before script, ie characters, writers
+# stage directions with [] or % 
 # 
 #####################################################################
 # # other random stuff
