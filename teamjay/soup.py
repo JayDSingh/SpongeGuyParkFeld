@@ -32,7 +32,6 @@ for link in soup.find_all("table")[1].find_all("a"):
 # scraping data from pages
 # starting with smaller subset for testing purposes
 import re
-regex = "<p>*[a-zA-A]: [a-zA-Z0-9]"
 
 for url in links[0:1]:
     # opens the url's html
