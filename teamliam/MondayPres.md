@@ -1,4 +1,4 @@
-Our plan for monday
+### Our plan for monday
 
 1st checkpoint in this project: be able to store data as csv in a desired standard format, so that we can write functions that work for all 
 three data sets of SpongeBob, Seinfeld, and South Park. Since the South Park data is cleaned, we should use that csv file as a guide. It 
