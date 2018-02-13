@@ -1,4 +1,4 @@
-#compiles all the transcript links into a list
+#compiles all the transcript links from season 1 into a list
 
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
