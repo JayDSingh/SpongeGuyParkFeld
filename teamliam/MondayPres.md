@@ -22,14 +22,16 @@ We manually add a response variable indicating that a line is part of a joke.
   -: May be clunky if a joke is 1 or 2 lines, or situational  
     Requires manual input  
 
-## 2nd Checkpoint (2/26):
-Think of measurements to take and write code to obtain statistics and establish an analysis based on these measurements.
+## 2nd Checkpoint (2/19):
+Think of measurements to take and write code to obtain statistics and establish an analysis based on these measurements.  
 Goals:  
-  *Have all the seasons (clean?).  
-⋅⋅*Have all the seasons
+  *Have all the seasons (clean?).
+  *Begin classifying Seinfeld and Spongebob
+  *Plot some basic metrics (word freq, character line freq)
 
-## 3rd Checkpoint:
-Run the code on the data and obtain measurements, then look at the results.
+## 3rd Checkpoint(2/26):
+Run the code on the data and obtain measurements, then look at the results.  
+Make a visibly intuitive 
 
 ## Final task:
 Report the most interesting and accurate conclusions to be drawn from the data in an article in The Labyrinth. 
