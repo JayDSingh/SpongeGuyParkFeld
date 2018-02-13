@@ -29,7 +29,7 @@ Goals:
   *Begin classifying Seinfeld and Spongebob
   *Plot some basic metrics (word freq, character line freq)
 
-## 3rd Checkpoint(2/26):
+## 3rd Checkpoint (2/26):
 Run the code on the data and obtain measurements, then look at the results.  
 Make a visibly intuitive 
 
