@@ -6,25 +6,25 @@
 
 Seinfeld Team:
 
-* In the Seinfeld script pages, all the script data is stored in a <div> with the id "content". Within this all the actual script data is within <p> tags. We wish to begin our scraping at the first <p> tag with a character speaking. For example, a line that says "Jerry: hello world" rather than "Transcribed by: John Cena" nor "Cast:".
+* In the Seinfeld script pages, all the script data is stored in a \<div\> with the id "content". Within this all the actual script data is within \<p\> tags. We wish to begin our scraping at the first \<p\> tag with a character speaking. For example, a line that says "Jerry: hello world" rather than "Transcribed by: John Cena" nor "Cast:".
   
- * In order to do this, we developed a Regular Expression that matches lines (<p> tags) wherein there is a colon and there is only one word before the colon, and there is non-null text after the colon.
+* In order to do this, we developed a Regular Expression that matches lines (\<p\> tags) wherein there is a colon and there is only one word before the colon, and there is non-null text after the colon.
   
 ```
   ^[^\s]*[\w]+[\s]*:(?=\s*\w)
  ```
  
-* We have implemented this into a file called 'testing_soup.py' wherein we scrape the data in one of the seinfeld scripts and attempt to select only the correct <p> tags using the RegEx defined earlier.
+* We have implemented this into a file called 'testing_soup.py' wherein we scrape the data in one of the seinfeld scripts and attempt to select only the correct \<p\> tags using the RegEx defined earlier.
 
 * We have begun to attempt to create a program which instead of only scraping one script at a time, now goes through the list of script URLs generated in 'soup.py' and attempts to generate a well formatted CSV file that incorporates all the episodes and all relevant data (speaker, episode number, line text, episode date). The only thing excluded so far is stage data. This is in 'combinedcode.py'
 
-* Going forward we want to consolidate everything together. The goal is to have one complete python program which can 1) pull all the episode script URLs & HTML docs, 2) generate BeautifulSoup objects from each of these, 3) extract out the relevant data (correct <p> tags within the 'content' <div>), and 4) create a well-formatted CSV file with this with clean data.
+* Going forward we want to consolidate everything together. The goal is to have one complete python program which can 1) pull all the episode script URLs & HTML docs, 2) generate BeautifulSoup objects from each of these, 3) extract out the relevant data (correct \<p\> tags within the 'content' \<div\>), and 4) create a well-formatted CSV file with this with clean data.
 
 Spongebob Team:
 
 * Repurposed seinfeld code in order to extract all URLs from spongebob page into a Python list. This allows us to systematically scrape each script.
 
-* For each individual spongebob transcript page the script is in a <ul> tag. Every line of text is contained within a <li> tag within the <ul> tag. We will start scraping from the <li> tag which has the first character name in a bold (<b>) tag. This will allow us to get rid of extraneous data before the actual script starts. So for each transcript page the scraping starts at the first <li> tag with a <b> tag within it.
+* For each individual spongebob transcript page the script is in a \<ul\> tag. Every line of text is contained within a \<li\> tag within the \<ul\> tag. We will start scraping from the \<li\> tag which has the first character name in a bold (\<b\>) tag. This will allow us to get rid of extraneous data before the actual script starts. So for each transcript page the scraping starts at the first \<li\> tag with a \<b\> tag within it.
 
 * Going forward, we will write a sample python program which extract all the script data line by line starting from the correct place. Then, we will try to generalize it to all the script pages using the 'urlscraping.py' file just as the seinfeld group is doing.
 
