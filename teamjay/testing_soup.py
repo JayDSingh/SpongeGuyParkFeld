@@ -52,7 +52,8 @@ for url in links[0:1]:
                 # \s* any number of whitespaces
                 # \w any word character
         match = re.search(r"^[^\s][\w]+[\s]*:(?=\s*\w)", str(entry))
-        print(match)
+        # print(match)
+
 
 #####################################################################
 # notes about scripts/inconsistencies
