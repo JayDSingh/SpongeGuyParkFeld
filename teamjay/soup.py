@@ -31,9 +31,15 @@ for link in soup.find_all("table")[1].find_all("a"):
 
 # scraping data from pages
 <<<<<<< HEAD
+<<<<<<< HEAD
 import re
 
 # starting with smaller subset for testing purposes
+=======
+# starting with smaller subset for testing purposes
+import re
+
+>>>>>>> a23a6eea2e6f1ec48d20f0ea2f950626aeb05f2b
 =======
 # starting with smaller subset for testing purposes
 import re
@@ -44,6 +50,7 @@ for url in links[0:1]:
     temp_html = urlopen(url).read()
     # parses html into soup object
     temp_soup = BeautifulSoup(temp_html, "html.parser")
+<<<<<<< HEAD
 <<<<<<< HEAD
     # finding the first speaker name with regex
     # finds all p tags in the div element
@@ -61,6 +68,8 @@ for url in links[0:1]:
         match = re.search(r"^[^\s][\w]+[\s]*:(?=\s*\w)", str(entry))
         # print(match)
 =======
+=======
+>>>>>>> a23a6eea2e6f1ec48d20f0ea2f950626aeb05f2b
     # prints text of div and p tags
     # finding the first speaker name with regex
     # does not currently work
@@ -69,6 +78,9 @@ for url in links[0:1]:
     # regex to find 
     # "<p>charcharcharnospace: wordswordswords"
     # ie first character name
+<<<<<<< HEAD
+>>>>>>> a23a6eea2e6f1ec48d20f0ea2f950626aeb05f2b
+=======
 >>>>>>> a23a6eea2e6f1ec48d20f0ea2f950626aeb05f2b
 
 
