@@ -1,0 +1,10 @@
+#The whole script is in the <ul> tag
+#Every new action/speech by a character starts with the <li> tag
+  #Every name has the <b> tag
+    #Indicator of where to start
+  #Actions are in the <i> tag 
+    #Ex: [Holds up a green squishy ball] - this is an action that we will want to cut out!
+    #We will want to exclude these
+  #All the speech is in quotes ("text") 
+    #Ex: "The annual jellyfish convention in Ukulele Bottom this weekend!"
+    #Desired data
