@@ -25,6 +25,8 @@ Spongebob Team:
 >* lines. We can take the text out using .get_text(), but we want to retain
 >* all the css tags so that it is easier to put the data into a csv file!
 >* Working on how to put the lines into the csv file is the next step.
+
+* Also analyzed code used by the Seinfeld Team for cleaning scripts and got familiar with HTML markers and regular expressions.
  
 * TODO: Figure out how to format the data into a csv file in the desired format (Southpark is our reference).
 
