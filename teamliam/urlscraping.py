@@ -1,25 +1,3 @@
-#compiles all the transcript links from season 1 into a list (just a test)
-
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
-              
-transcripts = "http://spongebob.wikia.com/wiki/List_of_transcripts#Season"
-
-rawHTML = urlopen(transcripts).read()
-
-soup = BeautifulSoup(rawHTML, "html.parser")
-
-links = []
-for link in soup.find_all("table")[1].find_all("a"):
-    links += ["http://spongebob.wikia.com/wiki/List_of_transcripts#Season" + link.get("href").strip()]
-newlinks = [ link for link in links if u"(transcript)" in link ]
-print(newlinks)
-
-
-
-
-
-
 #simultaneously compiles all the transcript links from all seasons into a single list
 #does not include Shorts (Shorts transcripts are formatted into multiple tables) and Rides (not actually part of the show) 
 
@@ -49,3 +27,29 @@ for season in transcripts:
     for link in soup.find_all("table")[1].find_all("a"):
         links += [season + link.get("href").strip()]
     newlinks += [ link for link in links if u"(transcript)" in link]
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #compiles all the transcript links from season 1 into a list (just a test)
+
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+              
+transcripts = "http://spongebob.wikia.com/wiki/List_of_transcripts#Season"
+
+rawHTML = urlopen(transcripts).read()
+
+soup = BeautifulSoup(rawHTML, "html.parser")
+
+links = []
+for link in soup.find_all("table")[1].find_all("a"):
+    links += ["http://spongebob.wikia.com/wiki/List_of_transcripts#Season" + link.get("href").strip()]
+newlinks = [ link for link in links if u"(transcript)" in link ]
+print(newlinks)
