@@ -4,6 +4,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import csv
+import re
 
 # soup.py
 # url to look at
@@ -25,33 +26,41 @@ for link in soup.find_all("table")[1].find_all("a"):
 
 # create csv file
 with open('scripts.csv', 'w') as csvfile:
-	filewriter = csv.writer(csvfile, delimiter=' ',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	filewriter.writerow(['Season Episode Character Dialogue'])
-	for single_link in links:
-		# soup_tester.py
-		# url to look at
-		firstEpi = single_link
-		# opens url and reads html contents
-		firstHTML = urlopen(firstEpi).read()
+    filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
+    filewriter.writerow(['Season', 'Episode', 'Character', 'Dialogue'])
 
-		# makes beautiful soup object and parses html from opened url
-		stew = BeautifulSoup(firstHTML, "html.parser")
+    for single_link in links[0:5]:
+        # soup_tester.py
+        # url to look at
+        # opens url and reads html contents
+        firstHTML = urlopen(single_link).read()
 
-		# extracts scripts from html
-		for script in stew(["script", "style"]):
-			script.extract()
+        # makes beautiful soup object and parses html from opened url
+        soup = BeautifulSoup(firstHTML, "html.parser")
+        # matches for this episode
+        matches = []
+        # scraping data from pages
+        for entry in soup.find("div", {"id": "content"}):
+            # searches each entry for a match
+            # regex explanation:
+            # ^ start of string
+            # [^\s]* does not match any number of whitespace characters
+            # [\w]+ has 1+ of word character(s) (a-z, A-Z, 0-9)
+            # [\s]* has 0 to unlimimted whitespace
+            # : matches exactly
+            # (?=\s*\w) positive lookahead (?)
+            # \s* any number of whitespaces
+            # \w any word character
+            # original ^[^\s]*[\w]+[\s]*:(?=\s*\w)
 
-		# english without html
-		# words = stew.get_text()
-    		# different from stew.get_text
-		# print(words)
+            match = re.search(r"^[^\s]*[\w]+[\s]*:.*<\/p>", str(entry))
 
-		# prints the contents of the first div element in html
+            if (match != None):
+                # subbed = re.sub(r",", "", match.group(0))
+                subbed = re.sub(r",", "\,\ ", match.group(0))
+                # subbed = re.sub(r",", "\"\",\"\"", match.group(0))
+                matches += [subbed]
 
-		contentdiv = stew.find("div", {"id": "content"})
-		paragraphs = contentdiv.find_all("p")
-
-		filewriter.writerow(paragraphs)
+        filewriter.writerow(matches)
 
 
