@@ -2,6 +2,32 @@
 
 # Current Progress Timeline
 
+
+### 2/23/18
+
+Seinfeld Team:
+
+* Started to work on consolidating our code into one file (combinedcode.py).
+* CSV file is no longer delimited by commas incorrectly. Previously each time a "," appeared in the script it would register as a new cell in the CSV file. Now, the commas no longer force a new cell to be created.
+* The RegEx now matches for the entire \<p\> tag rather than just up to the colon (:)
+* Going forward we want to format the CSV to include the episode number and perhaps season number. Also, removing the \<p\> tags and backslashes around commas.
+* We will also want to remove scene directions which are either in brackets [] or percent signs %%
+* There is also an issue where certain episodes are repeated twice. We don't know why this is occurring but it is something to work on next.
+  
+Spongebob Team:
+
+* The sample python program is in progress in testScrape.py. The progress that is made will be updated in that file, and is explained there in more detail.
+
+>* This is the first test scraper for the Spongebob scripts. 
+>* What I have done: I have learned and accomplished how to get the script from 
+>* the 1st episode by following the plan I previously laid out in the test 
+>* folder. I have gotten all the lines with the tags into the variable called
+>* lines. We can take the text out using .get_text(), but we want to retain
+>* all the css tags so that it is easier to put the data into a csv file!
+>* Working on how to put the lines into the csv file is the next step.
+ 
+* TODO: Figure out how to format the data into a csv file in the desired format (Southpark is our reference).
+
 ### 2/15/18
 
 Seinfeld Team:
