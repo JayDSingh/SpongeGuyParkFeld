@@ -27,7 +27,7 @@ for link in soup.find_all("table")[1].find_all("a"):
 # create csv file
 with open('scripts.csv', 'w') as csvfile:
     filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
-    filewriter.writerow(['Season', 'Episode', 'Character', 'Dialogue'])
+    filewriter.writerow(['Season Episode Character Dialogue'])
 
     for single_link in links[0:5]:
         # soup_tester.py
@@ -56,10 +56,7 @@ with open('scripts.csv', 'w') as csvfile:
             match = re.search(r"^[^\s]*[\w]+[\s]*:.*<\/p>", str(entry))
 
             if (match != None):
-                # subbed = re.sub(r",", "", match.group(0))
-                subbed = re.sub(r",", "\,\ ", match.group(0))
-                # subbed = re.sub(r",", "\"\",\"\"", match.group(0))
-                matches += [subbed]
+                matches += [match.group(0)]
 
         filewriter.writerow(matches)
 
