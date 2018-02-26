@@ -12,6 +12,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import csv
+import re
 
 #type(html_soup)
 #bs4.BeautifulSoup
@@ -29,7 +30,10 @@ lines = content.findAll('li')
 
 #for x in lines:
 	#print(x.getText())
-
+	
+for x in lines:
+	print(re.sub("[\(\[].*?[\)\]]", "", x.getText()))
+#this prints each character name and line without the content in brackets, which we do not want to count as character vocabulary
 #print(lines)
 
 
