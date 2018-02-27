@@ -29,7 +29,7 @@ with open('scripts.csv', 'w') as csvfile:
     filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
     filewriter.writerow(['Season Episode Character Dialogue'])
 
-    for single_link in links[0:5]:
+    for single_link in links[0:1]:
         # soup_tester.py
         # url to look at
         # opens url and reads html contents
@@ -53,12 +53,14 @@ with open('scripts.csv', 'w') as csvfile:
             # \w any word character
             # original ^[^\s]*[\w]+[\s]*:(?=\s*\w)
 
-            print(entry)
-            match = re.search(r"^[^\s]*[\w]+[\s]*:.*<\/p>", str(entry))
+            match = re.search(r"^[^\s]*[\w]+[\s]*:.*", str(entry), re.DOTALL)
 
             if (match != None):
                 # regex to remove p tags
-                clean = re.sub(r"<\/*p>", "", match.group(0))
+                # print(match)
+                space = re.sub(r" +", " ", match.group(0))
+                print(space)
+                clean = re.sub(r"<\/*p>", "", space)
                 cleaner = re.sub(r"[\(\[].*?[\)\]]", "", clean)
                 matches += [cleaner]
 
