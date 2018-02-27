@@ -53,10 +53,14 @@ with open('scripts.csv', 'w') as csvfile:
             # \w any word character
             # original ^[^\s]*[\w]+[\s]*:(?=\s*\w)
 
+            print(entry)
             match = re.search(r"^[^\s]*[\w]+[\s]*:.*<\/p>", str(entry))
 
             if (match != None):
-                matches += [match.group(0)]
+                # regex to remove p tags
+                clean = re.sub(r"<\/*p>", "", match.group(0))
+                cleaner = re.sub(r"[\(\[].*?[\)\]]", "", clean)
+                matches += [cleaner]
 
         filewriter.writerow(matches)
 
