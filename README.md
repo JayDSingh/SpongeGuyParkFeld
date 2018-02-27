@@ -2,6 +2,31 @@
 
 # Current Progress Timeline
 
+### 2/26/18
+
+Seinfeld Team:
+
+* Continued to work on combinedcode.py.  
+
+* Cleaned \<p\> tags (opening and closing) and the bracketed stage directions from the csv with regex.  
+
+* Fixed the issue of not getting multi-line scripts.  
+
+#### Current issues:
+
+* Some episodes are not getting scraped (4, 8, 10, 14 \[two spaces after colons?], 23 \[no colons after names], 32, and possibly more).  
+
+* \x92 or ```&#146;``` or right quotation mark are breaking code for PC.  
+
+```
+Traceback (most recent call last):
+  File "C:/Users/Lauren Shin/Documents/github/SpongeGuyParkFeld/teamjay/combinedcode.py", line 67, in <module>
+    filewriter.writerow(matches)
+  File "C:\Users\Lauren Shin\AppData\Local\Programs\Python\Python36\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\x92' in position 143: character maps to <undefined>
+```
+* The two-part finale is on one page, and both the first and second finale links link to that page.  The first finale script is scraped twice while the second is not scraped at all.  
 
 ### 2/23/18
 
