@@ -2,6 +2,22 @@
 
 # Current Progress Timeline
 
+### 3/2/18
+
+Seinfeld Team: 
+
+* Fixed encoding issue for PCs in combinedcode.py.
+
+#### Current issues:
+
+* Missing 78 episodes out of 180 total.  70 of which are completely blank.  
+
+* Brackets (ie stage directions) are not all being removed, though they should.  
+
+* Missing text from speakers with multiple words in name, ie "Soup Nazi:" or "Jerry and Elaine:".
+
+* Including things like "Cast:", "Broadcasted:".  
+
 ### 2/26/18
 
 Seinfeld Team:
