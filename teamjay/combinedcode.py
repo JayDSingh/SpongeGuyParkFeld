@@ -1,13 +1,11 @@
-# read in every episode of seinfeld script to csv file
-
 # attempt at grabbing all the urls for seinfeld scripts
+# and writing them to a csv file
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import csv
 import re
 
-# soup.py
-# url to look at
+# url with all the episode links
 transcripts = "http://www.seinfeldscripts.com/seinfeld-scripts.html"
 # opens url and reads html contents
 rawHTML = urlopen(transcripts).read()
@@ -25,7 +23,7 @@ for link in soup.find_all("table")[1].find_all("a"):
     links += ["http://www.seinfeldscripts.com/" + link.get("href").strip()]
 
 # create csv file
-with open('scripts.csv', 'w') as csvfile:
+with open('scripts.csv', 'w', encoding = 'utf-8') as csvfile:
     filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
     filewriter.writerow(['Season Episode Character Dialogue'])
 
@@ -39,6 +37,7 @@ with open('scripts.csv', 'w') as csvfile:
 
         # makes beautiful soup object and parses html from opened url
         soup = BeautifulSoup(firstHTML, "html.parser")
+
         # matches for this episode
         matches = []
         # scraping data from pages
@@ -54,16 +53,20 @@ with open('scripts.csv', 'w') as csvfile:
             # \s* any number of whitespaces
             # \w any word character
             # original ^[^\s]*[\w]+[\s]*:(?=\s*\w)
+            # .+ any character one or more times
+            # re.DOTALL -- . matches everything, even newline characters
 
-            match = re.search(r"^[^\s]*[\w]+[\s]*:.*", str(entry), re.DOTALL)
+            match = re.search(r"^[^\s]*[\w]+[\s]*:.+", str(entry), re.DOTALL)
 
             if (match != None):
-                # regex to remove p tags
-                # print(match)
+                # removes p tags
                 clean = re.sub(r"<\/*p>", "", match.group(0))
+                # removes lines with brackets
                 cleaner = re.sub(r"[\(\[].*?[\)\]]", "", clean)
+                # adds cleaned string to list
                 matches += [cleaner]
 
+        # writes csv with cleaned strings
         filewriter.writerow(matches)
 
 
