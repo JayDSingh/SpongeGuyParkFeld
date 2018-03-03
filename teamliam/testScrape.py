@@ -38,7 +38,7 @@ for x in lines:
 
 # take the character names
 def get_character(line):
-    x = re.search(".+:", line) # and not followed by another :?
+    x = re.search("^[^:]*:*", line) # and not followed by another :?
     y = x.group(0)
     y = re.sub(":", "", y)
     return y
