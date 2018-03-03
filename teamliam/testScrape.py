@@ -47,7 +47,7 @@ def get_character(line):
 def get_dialogue(line):
     x = re.search(":+.*", line)
     y = x.group(0)
-    y = re.sub(":\w", "", y)
+    y = re.sub("^[^:]*:\s*", "", y)
     return y
 
 #print(html_soup.prettify())
