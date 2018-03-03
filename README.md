@@ -30,6 +30,10 @@ Spongebob Team:
 
 * Segment each line with episode # and season # and add to csv file
 
+
+
+* /teamliam/Temp-/test_csv.py is beginning to generate a csv. However problems are that it is in the incorrect format. We want separate 'name' and 'line' columns but they are still together in a single column. Using the code from testScrape.py (which separates speaker 'name' and dialogue 'line') we should hope to solve this. However, this still needs to be done.
+
 ### 2/26/18
 
 Seinfeld Team:
