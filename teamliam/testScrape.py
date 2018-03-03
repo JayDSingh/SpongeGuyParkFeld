@@ -36,7 +36,18 @@ for x in lines:
 #this prints each character name and line without the content in brackets, which we do not want to count as character vocabulary
 #print(lines)
 
+# take the character names
+def get_character(line):
+    x = re.search(".+:", line) # and not followed by another :?
+    y = x.group(0)
+    y = re.sub(":", "", y)
+    return y
 
-
+# take the dialogue
+def get_dialogue(line):
+    x = re.search(":+.*", line)
+    y = x.group(0)
+    y = re.sub(":\w", "", y)
+    return y
 
 #print(html_soup.prettify())
