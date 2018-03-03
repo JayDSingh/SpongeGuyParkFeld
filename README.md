@@ -4,6 +4,8 @@
 
 ### 3/2/18
 
+Everyone started working in virtuall environments and created 'requirements.txt' files.
+
 Seinfeld Team: 
 
 * Fixed encoding issue for PCs in combinedcode.py.
@@ -14,9 +16,11 @@ Seinfeld Team:
 
 * Brackets (ie stage directions) are not all being removed, though they should.  
 
-* Missing text from speakers with multiple words in name, ie "Soup Nazi:" or "Jerry and Elaine:".
+* Including things like "Cast:", "Broadcasted:".  
 
-* Including things like "Cast:", "Broadcasted:".
+* We still do not know why some episodes are missing.
+
+* Some <p> tags are being excluded because they do not start with "Name: _____" even though we want them. We also seem to be missing speakers with multiple words in name, ie "Soup Nazi:" or "Jerry and Elaine:". We will want to find a way to get all of the <p> tags we want so as to not exclude any data.
 
 Spongebob Team:
 
