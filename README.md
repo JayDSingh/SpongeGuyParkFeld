@@ -8,14 +8,6 @@ Seinfeld Team:
 
 * Fixed encoding issue for PCs in combinedcode.py.
 
-Spongebob Team:
-
-* Wrote functions to separate the speaker and dialogue from each line (segment_line() in test_scrape.py)
-
-* Next steps: Test which episodes we can read with BS
-
-* Segment each line with episode # and season # and add to csv file
-
 #### Current issues:
 
 * Missing 78 episodes out of 180 total.  70 of which are completely blank.  
@@ -24,7 +16,15 @@ Spongebob Team:
 
 * Missing text from speakers with multiple words in name, ie "Soup Nazi:" or "Jerry and Elaine:".
 
-* Including things like "Cast:", "Broadcasted:".  
+* Including things like "Cast:", "Broadcasted:".
+
+Spongebob Team:
+
+* Wrote functions to separate the speaker and dialogue from each line (segment_line() in test_scrape.py)
+
+* Next steps: Test which episodes we can read with BS
+
+* Segment each line with episode # and season # and add to csv file
 
 ### 2/26/18
 
@@ -34,7 +34,11 @@ Seinfeld Team:
 
 * Cleaned \<p\> tags (opening and closing) and the bracketed stage directions from the csv with regex.  
 
-* Fixed the issue of not getting multi-line scripts.  
+* Fixed the issue of not getting multi-line scripts.
+
+#### Current issues:
+
+* Can't loop through links and open them
 
 #### Current issues:
 
