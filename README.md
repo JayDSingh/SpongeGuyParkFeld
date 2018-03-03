@@ -8,6 +8,14 @@ Seinfeld Team:
 
 * Fixed encoding issue for PCs in combinedcode.py.
 
+Spongebob Team:
+
+* Wrote functions to separate the speaker and dialogue from each line (segment_line() in test_scrape.py)
+
+* Next steps: Test which episodes we can read with BS
+
+* Segment each line with episode # and season # and add to csv file
+
 #### Current issues:
 
 * Missing 78 episodes out of 180 total.  70 of which are completely blank.  
