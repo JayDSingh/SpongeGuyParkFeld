@@ -2,6 +2,15 @@
 
 # Current Progress Timeline
 
+### 4/22/18
+
+In the past few meetings we began looking towards the analysis portion of our project. Our first project is to predict which show a given line of text comes from. We have begun to read in and tokenize the south park script data into NLTK (in /showclassification/test.py) and will soon add the spongebob and seinfeld data.
+
+The spongebob data is almost clean we simply need to slightly reformat the data.
+
+The seinfeld data is still incomplete but we will only return to perfect it if we have more time. Until then we will use what we have.
+
+
 ### 3/2/18
 
 Everyone started working in virtuall environments and created 'requirements.txt' files.
