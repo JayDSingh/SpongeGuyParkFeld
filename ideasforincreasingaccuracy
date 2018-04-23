@@ -1,0 +1,3 @@
+#Customize whatever weights we use, i.e. increasing IDF value for certain words that stand out for a given show
+#Manually pick words to pull out of our data; ntlk has built-in functions to remove stopping words but we might find other words in our
+#data set
