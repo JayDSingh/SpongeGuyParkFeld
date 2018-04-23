@@ -6,6 +6,8 @@
 
 In the past few meetings we began looking towards the analysis portion of our project. Our first project is to predict which show a given line of text comes from. We have begun to read in and tokenize the south park script data into NLTK (in /showclassification/test.py) and will soon add the spongebob and seinfeld data.
 
+We also tried an alternative method of reading in the south park script data using Pandas (in /teamliam/SouthParkDict.py).
+
 The spongebob data is almost clean we simply need to slightly reformat the data. Some of the lines are split across multiple columns whereas they should all be in one column (as in the south park data).
 
 * So we will write a python script which takes the CSV and then appends all columns beyond 'B' (from C onwards) onto the 'B' column.
