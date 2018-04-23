@@ -6,10 +6,16 @@
 
 In the past few meetings we began looking towards the analysis portion of our project. Our first project is to predict which show a given line of text comes from. We have begun to read in and tokenize the south park script data into NLTK (in /showclassification/test.py) and will soon add the spongebob and seinfeld data.
 
-The spongebob data is almost clean we simply need to slightly reformat the data.
+The spongebob data is almost clean we simply need to slightly reformat the data. Some of the lines are split across multiple columns whereas they should all be in one column (as in the south park data).
 
-The seinfeld data is still incomplete but we will only return to perfect it if we have more time. Until then we will use what we have.
+* So we will write a python script which takes the CSV and then appends all columns beyond 'B' (from C onwards) onto the 'B' column.
 
+The seinfeld data is still incomplete but we will only return to perfect it if we have more time. Until then we will use what we have. We will
+
+* Remove stage directions or things in "[]" angle brackets
+* Remove lines starting with "cast:" or "broadcast:"
+* Separate out the character names so that we can remove them.
+* If doable with limited time we will fix the issue where episodes are not included.
 
 ### 3/2/18
 
