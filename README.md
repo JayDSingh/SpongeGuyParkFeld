@@ -19,6 +19,8 @@ The seinfeld data is still incomplete but we will only return to perfect it if w
 * Separate out the character names so that we can remove them.
 * If doable with limited time we will fix the issue where episodes are not included.
 
+* in teamjay/temp.py, there is the start of splitting speaker/line into key : value pairs.  The function should work, but reading the csv correctly does not.  
+
 ### 3/2/18
 
 Everyone started working in virtuall environments and created 'requirements.txt' files.
