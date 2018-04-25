@@ -2,32 +2,29 @@ import nltk
 import re
 from collections import defaultdict
 import csv
+import string
 
 data = defaultdict(list)
 
-regex_line = r"^.+: *"
-regex_speaker = r":.+$"
+regex_speaker = r"^.{1,10}: *"
+regex_line = r":.+$"
 
 # preprocessing -- extracting speaker name, making it key
 # extracting line, making it part of speaker list
 def pre(line):
 
-    text = re.split(regex_line, line)[1]
+    text = re.search(regex_line, line)
+    speaker = re.search(regex_speaker, line)
 
-    print(text)
+    if (text and speaker):
+        # need to clean these up... not very good regexes... 
+        speaker = re.sub("\W{2,}", "", speaker.group(0).lower())
+        text = re.sub(("\s{2,}", "", text.group(0).lower()))
+        data[speaker] += [text]
 
-    speaker = re.split(regex_speaker, line)[0].lower()
+with open('C:/Users/Lauren Shin/Documents/github/SpongeGuyParkFeld/teamjay/scripts.csv') as csvfile:
+    csvFile = csv.reader(csvfile, delimiter=',', quotechar='"')
+    for row in csvFile:
+        pre(str(row))
 
-    print(speaker)
-    
-    data[speaker] += [text]
-
-
-# this is not how it is done... 
-# want to read csv, go row by row, add each line's speaker/text to dictionary
-thing = csv.reader("C:/Users/Lauren Shin/Documents/github/SpongeGuyParkFeld/teamjay/scripts.csv")
-
-for row in thing:
-    pre(row)
-
-print(data)
+print(data["george"])
