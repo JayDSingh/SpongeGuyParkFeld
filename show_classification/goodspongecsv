@@ -1,0 +1,14 @@
+import csv
+input_file = open("bigcsv.csv", "r", encoding="utf8")
+with open('bigcsv1.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',')
+    for row in csv.reader(input_file):
+        if len(row)>0:
+            if len(row)>= 2:
+                line = row[1]
+            else:
+                line = ''
+            for i in range(2,len(row)):
+                line += row[i]
+            L = [row[0],line]
+            spamwriter.writerow(L)
