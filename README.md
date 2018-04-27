@@ -2,6 +2,10 @@
 
 # Current Progress Timeline
 
+### 4/26/18
+
+For the Machine Learning portion of the project, we are drawing heavily from the following article: https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
+
 ### 4/22/18
 
 In the past few meetings we began looking towards the analysis portion of our project. Our first project is to predict which show a given line of text comes from. We have begun to read in and tokenize the south park script data into NLTK (in /showclassification/test.py) and will soon add the spongebob and seinfeld data.
