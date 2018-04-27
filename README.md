@@ -6,6 +6,14 @@
 
 For the Machine Learning portion of the project, we are drawing heavily from the following article: https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
 
+##### Seinfeld cleaning
+
+* Episodes 4, 10, and 11 (among others) are missing (confirm this). For episode 4 we figured out that the reason is that all of the script \<p\> tags have the form \<p align="left">Broadcasted: June 14, 1990 for the first time.\</p\> which does not work with our regex of ^[^\s]*[\w]+[\s]*:.+
+
+* So all the \<p\> tags for this episode (and likely more) are not be included in the CSV. We still are unsure why other episodes such as 10 and 11 are being excluded since they have normal \<p\> tags.
+
+* Also, in all of the rows, lines that were totally enclosed in angle brackets "[]" were being removed but not lines that had angle-bracketed sections as only a part of them. We are in the process of writing code to remove any instances of bracketed text.
+
 ### 4/22/18
 
 In the past few meetings we began looking towards the analysis portion of our project. Our first project is to predict which show a given line of text comes from. We have begun to read in and tokenize the south park script data into NLTK (in /showclassification/test.py) and will soon add the spongebob and seinfeld data.
