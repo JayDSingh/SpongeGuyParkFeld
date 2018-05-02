@@ -2,6 +2,15 @@
 
 # Current Progress Timeline
 
+### 5/1/18
+
+##### Spongebob
+
+`Clean_bigcsv.py` is up, which cleans the mergedbigcsv.csv. The goal here is to have a list of lines per character.
+Also, it seems like NBpredict.py is successful in getting an 80% classification rate on the Spongebob & Southpark datasets.
+
+* Looking ahead, we should try to implement some unsupervised learning, i.e. http://www.aclweb.org/anthology/C00-1066 or https://tech.smartling.com/text-categorization-the-hackathon-project-b8c33ae94c24.
+
 ### 4/26/18
 
 For the Machine Learning portion of the project, we are drawing heavily from the following article: https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
