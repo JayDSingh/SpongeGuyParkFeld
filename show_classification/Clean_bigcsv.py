@@ -15,7 +15,7 @@
 import csv
 
 #  Let's read the csv file
-with open('/Users/evanazevedo/Documents/Academic/Coding/DS@UCSB/Sitcom_Transcripts/SpongeGuyParkFeld/show_classification/mergedbigcsv.csv', 'r', newline='', encoding='utf-8') as csvfile:
+with open('mergedbigcsv.csv', 'r', newline='', encoding='utf-8') as csvfile:
     all_lines = []
     for row in csv.reader(csvfile, delimiter=','):
         all_lines.append(row)
