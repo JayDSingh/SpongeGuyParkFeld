@@ -29,19 +29,6 @@ for i in range(867):
     if i%2 == 1:
         linksrem.append(links[i])
 
-
-#print(linksrem)
-
-#for i in linksrem:
-    #ind = links.index(i)
-    #links.pop(ind)
-
-#print(len(linksrem))
-
-
-# type(html_soup)
-# bs4.BeautifulSoup
-
 J = []
 for link in linksrem:
 
@@ -53,10 +40,6 @@ for link in linksrem:
 
     # find each bullet
     lines = content.findAll('li')
-
-    #L = []
-    #for x in lines:
-        #L.append(x.getText())
 
     P = []
     for x in lines:
@@ -79,11 +62,3 @@ with open('bigcsv.csv', 'w', newline='', encoding='utf-8') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',')
         for line in J:
             spamwriter.writerow(line)
-
-
-
-
-    #print(lines)
-
-
-    #print(html_soup.prettify())++
