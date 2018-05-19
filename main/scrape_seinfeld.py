@@ -24,7 +24,7 @@ for link in soup.find_all("table")[1].find_all("a"):
 
 # create csv file
 with open('seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
-    filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
+    filewriter = csv.writer(csvfile, delimiter = ',', quoting=csv.QUOTE_ALL, quotechar='"')
     filewriter.writerow(['Season Episode Character Dialogue'])
 
     episode_number = 1
@@ -62,9 +62,9 @@ with open('seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
                 # removes p tags
                 clean = re.sub(r"<\/*p>", "", match.group(0))
                 # removes lines with brackets
-                cleaner = re.sub(r"[\(\[].*?[\)\]]", "", clean)
+                cleaner = re.sub(r'[\(\[].*?[\)\]]', "", clean, flags = re.S)
                 # adds cleaned string to list
-                matches += [cleaner]
+                matches += cleaner.split(':')
 
         # writes csv with cleaned strings
         filewriter.writerow(matches)
