@@ -2,6 +2,15 @@
 
 # Current Progress Timeline
 
+### 5/19/18
+
+##### Seinfeld
+Speaker and line are now separated however every place where there is a colon (:) is being treated as a new entry. Many of the 'lines' have colons (:) within them and that is causing a lot more entries whereas they should all be combined (outside of the speaker).
+
+See main/seinfeld_transcript.csv file for more details.
+
+Also, clean_seinfeld.py may become unnecessary as the cleaning is being done in scrape_seinfeld.py
+
 ### 5/1/18
 
 ##### Spongebob
