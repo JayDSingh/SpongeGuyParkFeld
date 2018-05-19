@@ -27,6 +27,7 @@ def pre(line):
         # need to clean these up... not very good regexes...
         speaker = re.sub("\W{2,}", "", speaker.group(0).lower())
         text = re.sub("\s{2,}", "", text.group(0).lower())
+        #text += re.sub("[\(\[].*?[\)\]]", "", text) use this regex to remove brackets?
         data[speaker] += [text]
 
 with open('seinfeld_transcript.csv', encoding="utf-8") as csvfile:
@@ -35,7 +36,9 @@ with open('seinfeld_transcript.csv', encoding="utf-8") as csvfile:
         pre(str(row))
 
 with open('new_seinfeld_transcript.csv', 'w', encoding="utf-8") as csvfile:
-    filewriter = csv.writer(csvfile, delimiter = '\n', quoting=csv.QUOTE_ALL, quotechar='"')
+    filewriter = csv.writer(csvfile, delimiter = ',', quoting=csv.QUOTE_ALL, quotechar='"')
     for key, value in data.items():
-        row = str(key, ",", str(data[key])
+        #separates into two columns: speaker name and line
+        #but does some weird things like putting back all of the symbols and HTML that were taken out earlier
+        row = key.upper(), str(data[key])
         filewriter.writerow(row)
