@@ -8,9 +8,9 @@ import numpy as np
 text_clf = Pipeline([('vect', CountVectorizer()),('tfidf', TfidfTransformer()),('clf', MultinomialNB())])
 count_vect = CountVectorizer()
 input_file = open("All-seasons.csv", "r", encoding="utf8")
-L = []
-T = []
-J = []
+L = []  #list of training lines
+T = []  #list of test lines
+J = []  #list of test tags
 acc = 0
 for row in csv.reader(input_file):
     if acc < 60000:
@@ -24,17 +24,17 @@ for row in csv.reader(input_file):
 
 
 input_file1 = open("bigcsv1.csv", "r", encoding="utf8")
-bacc = 0
+acc1 = 0
 for row in csv.reader(input_file1):
-    if bacc < 40000:
+    if acc1 < 40000:
         L.append(str(row[1]))
-        bacc += 1
-    if bacc == 40000:
+        acc1 += 1
+    if acc1 == 40000:
         T.append(str(row[1]))
         J.append('SS')
 
 
-P = []
+P = [] #list of training tags
 X_train_counts = count_vect.fit_transform(L)
 for i in range(0,60000):
     P.append('SP')
