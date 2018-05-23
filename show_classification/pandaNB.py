@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 """ This script is a basis for show classification using the Pandas library
+    This script is meant to be run within the show_classification folder, but will work
+    within any sub-directory of SpongeGuyParkFeld.
     5/23/18: This is currently predicting with MultinomialNB
 """
 
