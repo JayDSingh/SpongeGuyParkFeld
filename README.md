@@ -8,7 +8,7 @@
 ### 5/22/18
 
 ##### Seinfeld
-Discovered that the second re.sub deletes everything enclosed in brackets up until the next colon. (i.e. "SpongeGuyParkFeld \[hello] yes: after the colon: --> "SpongeGuyParkFeld after the colon"
+Discovered that the second re.sub deletes everything enclosed in brackets up until the next colon. (i.e. "SpongeGuyParkFeld \[hello] yes: after the colon:" --> "SpongeGuyParkFeld after the colon"
 
 See main/seinfeld_transcript.csv file for more details.
 
