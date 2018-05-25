@@ -3,7 +3,11 @@
 # Current Progress Timeline
 
 
-
+### 5/24/18
+`PandasNB.py` is now working & properly annotated
+Checklist for the meeting tonight:
+* Exploratory data analysis on the data sets
+* Try different ML methods on `PandasNB.py`
 
 ### 5/22/18
 
