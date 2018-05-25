@@ -5,6 +5,9 @@
 
 ### 5/24/18
 
+##### Seinfeld Transcript is now ready-to-go.
+I believe it is totally complete however I may have missed something so feel free to check it.
+
 
 `PandasNB.py` is now working & properly annotated
 Checklist for the meeting tonight:
