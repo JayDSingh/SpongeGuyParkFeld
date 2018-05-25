@@ -3,7 +3,26 @@
 # Current Progress Timeline
 
 
+### 5/24/18
+`PandasNB.py` is now working & properly annotated
+Checklist for the meeting tonight:
+* Exploratory data analysis on the data sets
+* Try different ML methods on `PandasNB.py`
+#### Got word2vec algorithm working on SpongeBob & South Park.
+Currently, the code plots a similarity graph for SpongeBob.
 
+Results:
+* A word similarity graph. Can easily be modified to show South Park
+* First Neural Net in our analysis.
+Next Step:
+Use weights of words found by NN to do unsupervised learning & clustering.
+
+### 5/22/18
+
+##### Seinfeld
+Discovered that the second re.sub deletes everything enclosed in brackets up until the next colon. (i.e. "SpongeGuyParkFeld \[hello] yes: after the colon:" --> "SpongeGuyParkFeld after the colon"
+
+See main/seinfeld_transcript.csv file for more details.
 
 ### 5/19/18
 
