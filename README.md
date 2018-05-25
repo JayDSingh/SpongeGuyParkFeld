@@ -16,7 +16,7 @@ Also, clean_seinfeld.py may become unnecessary as the cleaning is being done in 
 
 #### General
 
-* Get Naive Bayes Clustering to work with Pandas in pandaNB.py in show_classification
+* Get Naive Bayes to work with Pandas in pandaNB.py in show_classification
 * Explore alternative model classification algorithms other than Naive Bayes
 * Explore alternative model accuracy evaluation metrics
 
