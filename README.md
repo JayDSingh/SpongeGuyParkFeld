@@ -4,10 +4,15 @@
 
 
 ### 5/24/18
+
+
 `PandasNB.py` is now working & properly annotated
 Checklist for the meeting tonight:
 * Exploratory data analysis on the data sets
 * Try different ML methods on `PandasNB.py`
+* add cross validation to pandaNB.py
+* find best k-folds for cross validation
+
 #### Got word2vec algorithm working on SpongeBob & South Park.
 Currently, the code plots a similarity graph for SpongeBob.
 
