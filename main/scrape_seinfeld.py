@@ -23,9 +23,9 @@ for link in soup.find_all("table")[1].find_all("a"):
     links += ["http://www.seinfeldscripts.com/" + link.get("href").strip()]
 
 # create csv file
-with open('seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
+with open('temp_seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
     filewriter = csv.writer(csvfile, delimiter = ',', quoting=csv.QUOTE_ALL, quotechar='"')
-    filewriter.writerow(['Season Episode Character Dialogue'])
+    filewriter.writerow(["Speaker", "Line"])
 
     episode_number = 1
     for single_link in links:
@@ -64,7 +64,23 @@ with open('seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
                 # removes lines with brackets
                 cleaner = re.sub(r'[\(\[].*?[\)\]]', "", clean, flags = re.S)
                 # adds cleaned string to list
-                matches += cleaner.split(':')
+                final = cleaner.split(':')
+
+                filewriter.writerow(final)
 
         # writes csv with cleaned strings
-        filewriter.writerow(matches)
+
+
+input_file = open("temp_seinfeld_transcript.csv", "r", encoding="utf8")
+with open('seinfeld_transcript.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',')
+    for row in csv.reader(input_file):
+        if len(row)>0:
+            if len(row)>= 2:
+                line = row[1]
+            else:
+                line = ''
+            for i in range(2,len(row)):
+                line += row[i]
+            L = [row[0],line]
+            spamwriter.writerow(L)
