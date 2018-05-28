@@ -66,6 +66,8 @@ with open('temp_seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
                 # adds cleaned string to list
                 final = cleaner.split(':')
 
+                final[0] = final[0].lower();
+
                 filewriter.writerow(final)
 
         # writes csv with cleaned strings
