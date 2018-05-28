@@ -25,7 +25,7 @@ for link in soup.find_all("table")[1].find_all("a"):
 # create csv file
 with open('temp_seinfeld_transcript.csv', 'w', encoding = 'utf-8') as csvfile:
     filewriter = csv.writer(csvfile, delimiter = ',', quoting=csv.QUOTE_ALL, quotechar='"')
-    filewriter.writerow(["Speaker", "Line"])
+    filewriter.writerow(["Character", "Line"])
 
     episode_number = 1
     for single_link in links:
