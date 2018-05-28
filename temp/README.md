@@ -12,3 +12,7 @@ Run with `python3 text_gen.py --input_file=\path_to_transcript --ckpt_file="save
 `--input_file` defaults to "southpark_transcript.csv" in temp.
 This code can be ran from anywhere within SpongeGuyParkFeld on your machine.
 Training it takes days...
+
+### PandaNB.py
+basis for show classification using the Pandas library
+currently predicting with MultinomialNB
