@@ -7,7 +7,7 @@ Requires: *Nothing*
 
 
 ### `scrape_seinfeld.py`
-Generates `seinfeld_transcript.csv`
+Generates `seinfeld_transcript.csv` and superfluous `temp_seinfeld_transcript.csv`
 
 Requires: *Nothing*
 
