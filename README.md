@@ -2,6 +2,13 @@
 
 # Current Progress Timeline
 
+### 5/27/18
+There are now README.md files in [main](main) and [temp](temp). From now on we should put the working files which are needed to run the project in [main](main) and things that are not essential or need more work in [temp](temp). Also update the README.md files in both to explain what each file does.
+
+[PandaNB.py now works with all three shows and has been moved to the main directory](main/PandaNB.py). It achieves 75.8% accuracy clasifying between the three shows.
+
+##### Moving forward
+At this point we should try some new algorithms besides Naive Bayes. We may also try to update and integrate in `stemmingpredict.py`, `gridsearchparams.py` and other files to further improve our model. As of now it still uses things like 'bigcsv' so they are being moved to temp.
 
 ### 5/24/18
 
