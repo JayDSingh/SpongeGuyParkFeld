@@ -71,7 +71,7 @@ def show_pred(tr, tst):
     count_vect = CountVectorizer()
 
     # Now, we run Count Vec, TFIDF, and MultinomialNB
-    X_train_counts = count_vect.fit_transform(tr_shows)
+    X_train_counts = count_vect.fit_transform(tr_lines)
     X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
     clf = MultinomialNB().fit(X_train_tfidf, tr_shows)
     text_clf = text_clf.fit(tr_lines, tr_shows)
