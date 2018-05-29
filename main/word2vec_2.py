@@ -38,17 +38,18 @@ import pickle
 import pandas
 
 ##
-# for processing new data
+# # for processing new data
 #
 # nlp = spacy.load("en")
-# path where data is
-# corpus = pandas.read_csv('C:/Users/Lauren Shin/Documents/github/SpongeGuyParkFeld/main/spongebob_transcript.csv')
-# lines = corpus["Unnamed: 1"]
+# # path where data is
+# corpus = pandas.read_csv('C:/Users/Lauren Shin/Documents/github/SpongeGuyParkFeld/main/seinfeld_transcript.csv')
+# # find column with lines in it
+# lines = corpus["Line"]
 #
 # vocabulary = []
-#
-# ##
-#
+
+##
+
 # for word in lines:
 #     # processed word
 #     entry = nlp(str(word))
@@ -75,6 +76,7 @@ with open ('C:/Users/Lauren Shin/Desktop/southpark_tokens.txt', 'rb') as fp:
 
 '''
 # -pron- is general pronoun lemma
+
 R 12:30
 theory 
 look at tensorflow tutorial recurrent neural networks
@@ -84,9 +86,11 @@ this one uses lstm - long short-term memory
 read about it here
 https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 take notes on what is unclear
+
 probably won't do seq2seq models
 focus more on lstm
 next week to spacy
+
 '''
 ##
 
@@ -95,8 +99,8 @@ next week to spacy
 # and 1000 for first 10000 words of brown corpus, 1 million words total
 # 951904 in southpark transcripts, use 20000
 # 578533 in spongebob transcripts, use 9500
-
-vocabulary_size = 2500
+# 309386 in seinfeld transcripts, use 5000?
+vocabulary_size = 20000
 
 ##
 
@@ -239,9 +243,9 @@ with graph.as_default():
 
 ##
 
-print(len(reverse_dictionary)) #32231 # 20000 SP # 9500
+print(len(reverse_dictionary)) #32231 # 20000 SP # 9500 # SF 5000
 print(len(dictionary)) # 32231 # 20000 SP
-print(len(data)) # 1040486 # 951904 # 578533
+print(len(data)) # 1040486 # 951904 # 578533 # SF 951904
 print(len(count)) # 32231 # 20000 SP
 
 ##
@@ -294,7 +298,6 @@ def plot_with_labels(low_dim_embs, labels, filename):
     assert low_dim_embs.shape[0] >= len(labels), 'More labels than embeddings'
     plt.figure(figsize=(36,36))    # in inches
     for i, label in enumerate(labels):
-        counter = counter + 1
         x, y = low_dim_embs[i, :]
         plt.scatter(x, y)
         plt.annotate(label,
@@ -311,7 +314,8 @@ try:
     import matplotlib.pyplot as plt
 
     tsne = TSNE(perplexity=30, n_components=2, init='pca', n_iter=5000, method='exact')
-    plot_only = 500
+    # number of words to plot
+    plot_only = 250
     low_dim_embs = tsne.fit_transform(final_embeddings[:plot_only, :])
     labels = [reverse_dictionary[i] for i in xrange(plot_only)]
     plot_with_labels(low_dim_embs, labels, os.path.join('C:/Users/Lauren Shin/Desktop/tsne.png'))
