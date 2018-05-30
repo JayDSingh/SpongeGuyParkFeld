@@ -2,6 +2,9 @@
 
 # Current Progress Timeline
 
+### 5/28/18
+Implemented Random Forests in [main/pandaRF.py](main/pandaRF.py). Achieved 88.4% accuracy.
+
 ### 5/27/18
 There are now README.md files in [main](main) and [temp](temp). From now on we should put the working files which are needed to run the project in [main](main) and things that are not essential or need more work in [temp](temp). Also update the README.md files in both to explain what each file does.
 
