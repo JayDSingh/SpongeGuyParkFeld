@@ -23,7 +23,7 @@ transcript_2 = "spongebob_transcript.csv"
 transcript_3 = "seinfeld_transcript.csv"
 ## Go to the files
 repo = os.path.split(os.getcwd())
-script_folder = "main"
+script_folder = "data"
 path_1 = os.path.join(repo[0], script_folder, transcript_1)
 path_2 = os.path.join(repo[0], script_folder, transcript_2)
 path_3 = os.path.join(repo[0], script_folder, transcript_3)
