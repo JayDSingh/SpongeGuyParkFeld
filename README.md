@@ -14,6 +14,8 @@ Our groups are looking to gain some insight onto the development of humor from m
 We also look to compare the complexity of vocabulary between the shows.
 The desired outcome of this project is a text generator which will be able to create new content based on the styles of these individual shows.
 
+This project was originally presented at the Data Science at UCSB 2018 Project Showcase. Check out Data Science at UCSB [here](http://datascienceucsb.org/)
+
 ## <a name="Contributors"></a>Contributors
 
 - Jay Singh
@@ -25,7 +27,7 @@ The desired outcome of this project is a text generator which will be able to cr
 - Stevyn Fessler
 - Michelle Su
 
-Special thanks to Jason Freeberg for both the idea for this project and the guidance to help us get started.
+Special thanks to Jason Freeberg and Timothy Nguyen for giving us guidance in our beginning and later stages, respectively.
 
 
 ## <a name="Packages-Required"></a>Packages Required
